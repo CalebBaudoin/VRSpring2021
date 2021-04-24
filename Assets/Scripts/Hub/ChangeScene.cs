@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Valve.VR;
 
 public class ChangeScene : MonoBehaviour
 {
@@ -18,20 +19,30 @@ public class ChangeScene : MonoBehaviour
     void Update()
     {
         rng = Random.Range(0, 999) % 3;
-        Debug.Log(rng);
+        //Debug.Log(rng);
+    }
+
+    void test()
+    {
+        Debug.Log("test WORKS");
     }
     private void OnTriggerEnter(Collider other)
     {
-
-        if (other.CompareTag("Hand") && thisObject.CompareTag("Arcade")){
+        Debug.Log(other.tag);
+        if (other.CompareTag("Hands"))
+        {
+            Debug.Log("Fuck");
+        }
+        if (other.CompareTag("Hands") && thisObject.CompareTag("Arcade")){
             
             SceneManager.LoadScene("ArcadeTest");
             
         }
-        if (other.CompareTag("Hand") && thisObject.CompareTag("Labyrinth")){
+        if (other.CompareTag("Hands") && thisObject.CompareTag("Labyrinth")){
 
             rng = Random.Range(0, 2);
-            SceneManager.LoadScene("Labyrinths");
+            //SceneManager.LoadScene("Labyrinths");
+            SteamVR_LoadLevel.Begin("Labyrinths");
             /*
              if(rng == 0){
                 SceneManager.LoadScene("FirstLabyrinth"); 
