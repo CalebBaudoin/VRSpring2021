@@ -28,14 +28,11 @@ public class ChangeScene : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
-        if (other.CompareTag("Hands"))
-        {
-            Debug.Log("Fuck");
-        }
+      
         if (other.CompareTag("Hands") && thisObject.CompareTag("Arcade")){
             
-            SceneManager.LoadScene("ArcadeTest");
+            //SceneManager.LoadScene("ArcadeTest");
+            SteamVR_LoadLevel.Begin("ArcadeTest");
             
         }
         if (other.CompareTag("Hands") && thisObject.CompareTag("Labyrinth")){
@@ -43,17 +40,21 @@ public class ChangeScene : MonoBehaviour
             rng = Random.Range(0, 2);
             //SceneManager.LoadScene("Labyrinths");
             SteamVR_LoadLevel.Begin("Labyrinths");
-            /*
-             if(rng == 0){
-                SceneManager.LoadScene("FirstLabyrinth"); 
+            //SceneManager.LoadScene("RoomLab");
+            //SteamVR_LoadLevel.Begin("RoomLab");
+             /*if(rng == 0){
+                SteamVR_LoadLevel.Begin("FirstLabyrinth");
+                //SceneManager.LoadScene("FirstLabyrinth"); 
              }
              else if(rng == 1){
-                SceneManager.LoadScene("RoomLab");
+                //SceneManager.LoadScene("RoomLab");
+                SteamVR_LoadLevel.Begin("RoomLab");
              }
              else if (rng == 2){
-                SceneManager.LoadScene("BasicMaze");
-             }
-             */
+                SteamVR_LoadLevel.Begin("BasicMaze");
+                //SceneManager.LoadScene("BasicMaze");
+             }*/
+             
 
         }
     }
