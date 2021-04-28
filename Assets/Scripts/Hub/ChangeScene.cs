@@ -38,21 +38,21 @@ public class ChangeScene : MonoBehaviour
         if (other.CompareTag("Hands") && thisObject.CompareTag("Labyrinth")){
 
             rng = Random.Range(0, 2);
-            //SceneManager.LoadScene("Labyrinths");
-            SteamVR_LoadLevel.Begin("Labyrinths");
+            SceneManager.LoadScene("Labyrinths");
+            //SteamVR_LoadLevel.Begin("Labyrinths");
             //SceneManager.LoadScene("RoomLab");
             //SteamVR_LoadLevel.Begin("RoomLab");
              /*if(rng == 0){
-                SteamVR_LoadLevel.Begin("FirstLabyrinth");
-                //SceneManager.LoadScene("FirstLabyrinth"); 
+                //SteamVR_LoadLevel.Begin("FirstLabyrinth");
+                SceneManager.LoadScene("FirstLabyrinth"); 
              }
              else if(rng == 1){
                 //SceneManager.LoadScene("RoomLab");
                 SteamVR_LoadLevel.Begin("RoomLab");
              }
              else if (rng == 2){
-                SteamVR_LoadLevel.Begin("BasicMaze");
-                //SceneManager.LoadScene("BasicMaze");
+                //SteamVR_LoadLevel.Begin("BasicMaze");
+                SceneManager.LoadScene("BasicMaze");
              }*/
              
 
