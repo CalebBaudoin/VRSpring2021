@@ -145,11 +145,19 @@ public class ShowControllers : MonoBehaviour
                 if (displayText.Length > 0)
                 {
                     ControllerButtonHints.HideAllTextHints(hand);
-
+                    StartCoroutine(BuzzController(hand));
                     ControllerButtonHints.ShowTextHint(hand, action, displayText);
                     yield return new WaitForSeconds(4.0f);
                 }
             }
         }
     }
+
+    private IEnumerator BuzzController(Hand hand)
+    {
+        hand.TriggerHapticPulse(10000);
+        yield return new WaitForSeconds(2f);
+        hand.TriggerHapticPulse(10000);
+    }
+
 }
