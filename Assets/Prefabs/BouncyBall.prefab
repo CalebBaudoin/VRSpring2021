@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 9166767349364689990}
   - component: {fileID: 9166767349364689993}
   - component: {fileID: 9166767349364689992}
+  - component: {fileID: 1973850011554951599}
   m_Layer: 0
   m_Name: BouncyBall
   m_TagString: Untagged
@@ -347,10 +348,34 @@ MonoBehaviour:
   restoreOriginalParent: 0
   onPickUp:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1973850011554951599}
+        m_TargetAssemblyTypeName: AlteredReset, Assembly-CSharp
+        m_MethodName: Active
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDetachFromHand:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1973850011554951599}
+        m_TargetAssemblyTypeName: AlteredReset, Assembly-CSharp
+        m_MethodName: Resting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onHeldUpdate:
     m_PersistentCalls:
       m_Calls: []
@@ -367,6 +392,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e316b5390eabf7940937ea614973318a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1973850011554951599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520823849565954589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9588f91c0f63564b8e3ecd6c48dc05f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  ball: {fileID: 8520823849565954589}
+  ballLight: {fileID: 8520823849997166981}
+  offset: {x: 0, y: 0.3, z: 0}
 --- !u!1 &8520823849997167035
 GameObject:
   m_ObjectHideFlags: 0
