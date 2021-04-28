@@ -22,13 +22,16 @@ public class HelpZoneScript : MonoBehaviour
 
     private void Update()
     {
-        if (showing)
+        if (!sc.overrideBool)
         {
-            sc.ShowHints();
-        }
-        else
-        {
-            sc.HideHints();
+            if (showing)
+            {
+                sc.ShowHints();
+            }
+            else
+            {
+                sc.HideHints();
+            }
         }
     }
 

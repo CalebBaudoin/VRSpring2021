@@ -9,6 +9,8 @@ public class ShowControllers : MonoBehaviour
     public bool showControllersBool = false;
     public bool showHintsBool = false;
 
+    public bool overrideBool = false;
+
     private Coroutine showing;
 
     public SteamVR_Action interactUIAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("InteractUI");
@@ -145,7 +147,7 @@ public class ShowControllers : MonoBehaviour
                 if (displayText.Length > 0)
                 {
                     ControllerButtonHints.HideAllTextHints(hand);
-                    StartCoroutine(BuzzController(hand));
+                    //StartCoroutine(BuzzController(hand));
                     ControllerButtonHints.ShowTextHint(hand, action, displayText);
                     yield return new WaitForSeconds(4.0f);
                 }
