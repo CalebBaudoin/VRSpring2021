@@ -265,7 +265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &481656912
 Light:
   m_ObjectHideFlags: 0
@@ -954,6 +954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showControllersBool: 0
   showHintsBool: 0
+  overrideBool: 0
   interactUIHintText: Interact with UI
   grabGripText: Grip Objects
   teleportHintText: 'Snap Turn (Left/Right)
@@ -1234,6 +1235,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: LabyrinthMaster
       objectReference: {fileID: 0}
+    - target: {fileID: 247855921568522974, guid: 6a0a07fe8dd67f9468ffca39bf928f7d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d2bbbd01c5b7a6b4bb5a1316f21fc1ff, type: 2}
+    - target: {fileID: 7647270780534212385, guid: 6a0a07fe8dd67f9468ffca39bf928f7d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d2bbbd01c5b7a6b4bb5a1316f21fc1ff, type: 2}
+    - target: {fileID: 7833680429011065540, guid: 6a0a07fe8dd67f9468ffca39bf928f7d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d2bbbd01c5b7a6b4bb5a1316f21fc1ff, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a0a07fe8dd67f9468ffca39bf928f7d, type: 3}
 --- !u!4 &71788407904219684 stripped
