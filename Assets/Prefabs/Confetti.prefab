@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3719221671004799436}
   - component: {fileID: 3719221671004799435}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Confetti
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4100,8 +4100,8 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 0
-    ratio: 0
+    enabled: 1
+    ratio: 0.5
     light: {fileID: 0}
     randomDistribution: 1
     color: 1
