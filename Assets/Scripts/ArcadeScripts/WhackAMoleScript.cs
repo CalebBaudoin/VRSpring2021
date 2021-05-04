@@ -45,6 +45,7 @@ public class WhackAMoleScript : MonoBehaviour
     private IEnumerator PlayGame()
     {
         float startTime = Time.time; // Grab the start time
+        scoreboard.setStart(startTime);
 
         Debug.Log("Started!");
 
