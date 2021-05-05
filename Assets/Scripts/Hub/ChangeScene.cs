@@ -28,19 +28,19 @@ public class ChangeScene : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
       
-        if (other.CompareTag("Hands") && thisObject.CompareTag("Rooms")){
+        if (other.CompareTag("Player") && thisObject.CompareTag("Rooms")){
            
             SceneManager.LoadScene("RoomLab");
             //SteamVR_LoadLevel.Begin("RoomLab");
 
         }
-        if (other.CompareTag("Hands") && thisObject.CompareTag("Labyrinth")){
+        if (other.CompareTag("Player") && thisObject.CompareTag("Labyrinth")){
 
             SceneManager.LoadScene("FirstLabyrinth");
             //SteamVR_LoadLevel.Begin("FirstLabyrinth");
 
         }
-        if (other.CompareTag("Hands") && thisObject.CompareTag("Maze")){
+        if (other.CompareTag("Player") && thisObject.CompareTag("Maze")){
             //SteamVR_LoadLevel.Begin("BasicMaze");
             SceneManager.LoadScene("BasicMaze");
         }
