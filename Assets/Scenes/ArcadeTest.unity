@@ -542,7 +542,7 @@ Transform:
   - {fileID: 1906260842}
   - {fileID: 1315839680}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &246076964
 MonoBehaviour:
@@ -1189,7 +1189,7 @@ Transform:
   m_Children:
   - {fileID: 1638442931}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &535403128
 GameObject:
@@ -1234,6 +1234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b437b3af802ac4b876274bd20db4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  screen: {fileID: 0}
 --- !u!1 &566799583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1599,7 +1600,7 @@ Transform:
   - {fileID: 123019111}
   - {fileID: 566799584}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 83}
 --- !u!1 &610746662
 GameObject:
@@ -2160,6 +2161,63 @@ Transform:
   m_Father: {fileID: 590103936}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &945436309
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8002000126216006728, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002000126216006728, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.6343303
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002000126216006728, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.099999905
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002000126216006728, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.4849756
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002000126216006728, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002000126216006728, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002000126216006728, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002000126216006728, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002000126216006728, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002000126216006728, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002000126216006728, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002000126216006775, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_Name
+      value: Whack-A-Mole Machine (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
 --- !u!1 &946453714 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
@@ -2177,7 +2235,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4687d03d1a50fe645af35119383f5380, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showController: 0
+  showControllersBool: 0
+  showHintsBool: 0
+  overrideBool: 0
+  interactUIHintText: Interact with UI
+  grabGripText: Grip Objects
+  teleportHintText: 'Snap Turn (Left/Right)
+
+    Teleport (Back)'
+  touchPadHintText: Walk
+  menuHintText: Open / Close Menu
 --- !u!143 &946453716
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2211,7 +2278,21 @@ MonoBehaviour:
   input:
     actionPath: /actions/default/in/TouchPad
     needsReinit: 0
+  teleport:
+    actionPath: /actions/default/in/Teleport
+    needsReinit: 0
+  snapTurnLeft:
+    actionPath: /actions/default/in/SnapTurnLeft
+    needsReinit: 0
+  snapTurnRight:
+    actionPath: /actions/default/in/SnapTurnRight
+    needsReinit: 0
+  menubtn:
+    actionPath: /actions/default/in/Menu
+    needsReinit: 0
   speed: 1
+  laserpointer: {fileID: 0}
+  menu: {fileID: 0}
   gravity: {x: 0, y: 9.81, z: 0}
 --- !u!1 &950468263
 GameObject:
@@ -2307,7 +2388,7 @@ Transform:
   m_Children:
   - {fileID: 397542660}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1027136863
 GameObject:
@@ -2325,7 +2406,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1027136864
 Transform:
   m_ObjectHideFlags: 0
@@ -2342,7 +2423,7 @@ Transform:
   - {fileID: 1905619732}
   - {fileID: 535403129}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1027136865
 MonoBehaviour:

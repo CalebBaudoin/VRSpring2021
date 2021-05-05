@@ -1515,7 +1515,21 @@ MonoBehaviour:
   input:
     actionPath: /actions/default/in/TouchPad
     needsReinit: 0
+  teleport:
+    actionPath: /actions/default/in/Teleport
+    needsReinit: 0
+  snapTurnLeft:
+    actionPath: /actions/default/in/SnapTurnLeft
+    needsReinit: 0
+  snapTurnRight:
+    actionPath: /actions/default/in/SnapTurnRight
+    needsReinit: 0
+  menubtn:
+    actionPath: /actions/default/in/Menu
+    needsReinit: 0
   speed: 1
+  laserpointer: {fileID: 0}
+  menu: {fileID: 0}
   gravity: {x: 0, y: 9.81, z: 0}
 --- !u!143 &600458196
 CharacterController:
@@ -3425,7 +3439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1863909462
 Light:
   m_ObjectHideFlags: 0
