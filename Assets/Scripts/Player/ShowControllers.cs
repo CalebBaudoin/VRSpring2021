@@ -11,7 +11,7 @@ public class ShowControllers : MonoBehaviour
 
     public bool overrideBool = false;
 
-    private Coroutine showing;
+    public Coroutine showing;
 
     public SteamVR_Action interactUIAction = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("InteractUI");
     public string interactUIHintText = "Interact with UI";
@@ -39,15 +39,20 @@ public class ShowControllers : MonoBehaviour
             hand.SetSkeletonRangeOfMotion(Valve.VR.EVRSkeletalMotionRange.WithController);
         }
 
-        if (showControllersBool)
+        if (overrideBool)
         {
-            HideHints();
-            ShowControllerModels();
+            ShowHints();
+            HideControllerModels();
         }
         else if (showHintsBool)
         {
             ShowHints();
             HideControllerModels();
+        }
+        else if (showControllersBool)
+        {
+            HideHints();
+            ShowControllerModels();
         }
         else
         {

@@ -23,12 +23,10 @@ public class HintsHandler : MonoBehaviour
         if (tg.isOn)
         {
             showCons.overrideBool = true;
-            showCons.ShowHints();
         }
         else
         {
             showCons.overrideBool = false;
-            showCons.HideHints();
         }
     }
 }
