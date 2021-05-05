@@ -23,7 +23,7 @@ public class ScoreboardScript : MonoBehaviour
     {
         if (gameActive)
         {
-            screen.SetText("Time: " + (Time.deltaTime - startTime) + "\n" + "Score: " + screen);
+            screen.SetText("Score: " + score);
         }
     }
 
