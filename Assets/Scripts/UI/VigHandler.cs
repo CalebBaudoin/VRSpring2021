@@ -8,14 +8,14 @@ using Valve.VR.InteractionSystem;
 public class VigHandler : MonoBehaviour
 {
     public Dropdown dd;
-    private CharacterController cc;
+    private Rigidbody rb;
     private Volume vol;
 
     // Start is called before the first frame update
     void Start()
     {
         dd = this.GetComponent<Dropdown>();
-        cc = Player.instance.GetComponent<CharacterController>();
+        rb = Player.instance.GetComponent<Rigidbody>();
         vol = Player.instance.GetComponentInChildren<Volume>();
     }
 
@@ -28,15 +28,15 @@ public class VigHandler : MonoBehaviour
         }
         if (dd.value == 1)
         {
-            vol.weight = 0.5f * (cc.velocity.magnitude/1);
+            vol.weight = 0.5f * (rb.velocity.magnitude/1);
         }
         if (dd.value == 2)
         {
-            vol.weight = 0.75f * (cc.velocity.magnitude / 1);
+            vol.weight = 0.75f * (rb.velocity.magnitude / 1);
         }
         if (dd.value == 3)
         {
-            vol.weight = 1 * (cc.velocity.magnitude / 1);
+            vol.weight = 1 * (rb.velocity.magnitude / 1);
         }
     }
 }

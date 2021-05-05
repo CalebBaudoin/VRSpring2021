@@ -2726,6 +2726,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 930796432}
     m_Modifications:
+    - target: {fileID: 8002000124878611256, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002000124995059265, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002000125537066648, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002000125609711822, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8002000125640387408, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2793,6 +2809,14 @@ PrefabInstance:
     - target: {fileID: 8002000126216006775, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
       propertyPath: m_Name
       value: Whack-A-Mole Machine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002000126382802799, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8002000126456081813, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b76c7aa86c1e84f4594f9431ea4d59cd, type: 3}
@@ -2958,12 +2982,12 @@ RectTransform:
   - {fileID: 331891217}
   - {fileID: 228844273}
   - {fileID: 1748200927}
-  m_Father: {fileID: 1532389863}
-  m_RootOrder: 4
+  m_Father: {fileID: 1532389864}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -10}
+  m_AnchoredPosition: {x: -0.25, y: -9}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1437472807
@@ -3623,8 +3647,29 @@ MonoBehaviour:
     Teleport (Back)'
   touchPadHintText: Walk
   menuHintText: Open / Close Menu
---- !u!143 &1532389861
-CharacterController:
+--- !u!4 &1532389864 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 447954, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  m_PrefabInstance: {fileID: 1532389857}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1532389865
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532389858}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!136 &1532389866
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3633,19 +3678,10 @@ CharacterController:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1.5
   m_Radius: 0.3
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
+  m_Height: 1.5
+  m_Direction: 1
   m_Center: {x: 0, y: 0.75, z: 0}
---- !u!4 &1532389863 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 476540, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
-  m_PrefabInstance: {fileID: 1532389857}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1569096422
 GameObject:
   m_ObjectHideFlags: 0

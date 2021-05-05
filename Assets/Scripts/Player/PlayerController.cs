@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     private bool updateMenu = false;
     public float speed = 1;
 
-    private CharacterController controller;
+    private Rigidbody rb;
     public SteamVR_LaserPointer laserpointer;
 
     private Camera cam;
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.controller = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
 
         cam = this.gameObject.GetComponentInChildren<Camera>();
 
@@ -46,7 +46,9 @@ public class PlayerController : MonoBehaviour
 
         Vector3 direction = Player.instance.hmdTransform.TransformDirection(new Vector3(input.axis.x, 0, input.axis.y));
 
-        controller.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up) - gravity * Time.deltaTime);
+        rb.velocity = speed * Vector3.ProjectOnPlane(direction, Vector3.up);
+
+        //controller.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up) - gravity * Time.deltaTime);
 
         if (!showMenu && menubtn.stateDown && !anyInputs)
         {
