@@ -4860,12 +4860,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9166767349364689990, guid: f9d0e45dba0b7474f9c2893b3b1ded53, type: 3}
       propertyPath: hideControllerOnAttach
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 780128971037618110, guid: f9d0e45dba0b7474f9c2893b3b1ded53, type: 3}
     - {fileID: 780128971037618111, guid: f9d0e45dba0b7474f9c2893b3b1ded53, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f9d0e45dba0b7474f9c2893b3b1ded53, type: 3}
+--- !u!1 &1456784296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8520823849565954589, guid: f9d0e45dba0b7474f9c2893b3b1ded53, type: 3}
+  m_PrefabInstance: {fileID: 1456784295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1456784297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456784296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d4cc6cf300b3e4bb1411c4e041030c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportAllowed: 1
+  overrideHoverLock: 1
 --- !u!1001 &1497954142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5589,6 +5608,10 @@ PrefabInstance:
       propertyPath: highlightOnHover
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 22259847, guid: 874fa67bf177f3b41b2754c808424cc5, type: 3}
+      propertyPath: hideSkeletonOnAttach
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 222822169, guid: 874fa67bf177f3b41b2754c808424cc5, type: 3}
       propertyPath: hideSkeletonOnAttach
       value: 1
@@ -5665,6 +5688,25 @@ PrefabInstance:
     - {fileID: 222822168, guid: 874fa67bf177f3b41b2754c808424cc5, type: 3}
     - {fileID: 222822169, guid: 874fa67bf177f3b41b2754c808424cc5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 874fa67bf177f3b41b2754c808424cc5, type: 3}
+--- !u!1 &1702481072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8976693369656439483, guid: 874fa67bf177f3b41b2754c808424cc5, type: 3}
+  m_PrefabInstance: {fileID: 1702481071}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1702481073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702481072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d4cc6cf300b3e4bb1411c4e041030c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportAllowed: 1
+  overrideHoverLock: 1
 --- !u!1 &1765379256 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5553913008424334086, guid: 6e8c21f3df2781d42bd030da4ac49d09, type: 3}
