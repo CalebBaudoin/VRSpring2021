@@ -567,6 +567,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButtonSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 3310600335971548457, guid: b8f6999748f610d46b95a68ef7384091, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3310600335971548459, guid: b8f6999748f610d46b95a68ef7384091, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3310600335993294513, guid: b8f6999748f610d46b95a68ef7384091, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.184
