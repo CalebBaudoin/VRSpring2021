@@ -70,8 +70,11 @@ public class ShowControllers : MonoBehaviour
     {
         foreach (var hand in Player.instance.hands)
         {
-            hand.ShowController();
-            hand.HideSkeleton();
+            if (hand.currentAttachedObject == null)
+            {
+                hand.ShowController();
+                hand.HideSkeleton();
+            }
         }
     }
 
@@ -79,8 +82,11 @@ public class ShowControllers : MonoBehaviour
     {
         foreach (var hand in Player.instance.hands)
         {
-            hand.HideController();
-            hand.ShowSkeleton();
+            if (hand.currentAttachedObject == null)
+            {
+                hand.HideController();
+                hand.ShowSkeleton();
+            }
         }
     }
 
