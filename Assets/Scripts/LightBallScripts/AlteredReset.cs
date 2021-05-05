@@ -41,7 +41,7 @@ public class AlteredReset : MonoBehaviour
     {
         
         rb.isKinematic = false;
-        collider.isTrigger = false;
+        collider.isTrigger = true;
         isResting = false;
     }
 
@@ -49,6 +49,7 @@ public class AlteredReset : MonoBehaviour
     {
         isResting = true;
         ball.transform.parent = null;
+        collider.isTrigger = false;
         ballLight.enabled = true;
         StartCoroutine("DoRest");
     }
